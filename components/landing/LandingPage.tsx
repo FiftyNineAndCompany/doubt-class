@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+
+const basePath = process.env.NODE_ENV === 'production' ? '/doubt-class' : '';
 import { 
   Sparkles, 
   GraduationCap, 
@@ -188,7 +190,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             {activeStoryTab === 'problem' ? (
               <div className="relative">
                 <img
-                  src="/images/struggling.jpg"
+                  src={`${basePath}/images/struggling.jpg`}
                   alt="Student overwhelmed with difficult doubts late at night"
                   className="w-full h-[360px] sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -203,7 +205,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             ) : (
               <div className="relative">
                 <img
-                  src="/images/relief.jpg"
+                  src={`${basePath}/images/relief.jpg`}
                   alt="Student experiencing instant relief and clarity on tablet"
                   className="w-full h-[360px] sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -311,7 +313,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           {/* Main Visual */}
           <div className="lg:col-span-7 relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
             <img
-              src="/images/interaction.jpg"
+              src={`${basePath}/images/interaction.jpg`}
               alt="Interactive 1-on-1 doubt session with document camera and pen tablet"
               className="w-full h-auto object-cover rounded-2xl"
             />
